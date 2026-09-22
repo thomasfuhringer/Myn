@@ -18,17 +18,20 @@ print "Hello World.myn"
 ```
   
 <br/>
-USAGE: 
+USAGE:
+
 ```
 myn "Hello World.myn"
 ```
   
+<br/>
 or compile it into object code:
 
 ```
 mynce "Hello World.myn"
 ```
   
+<br/>
 and run
 ```
 myn "Hello World.mync"
