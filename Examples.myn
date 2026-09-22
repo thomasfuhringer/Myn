@@ -1,0 +1,118 @@
+# Myn code examples
+#--------------------------------------------------------
+
+print "Hello World!\n"
+
+#--------------------------------------------------------
+
+# procedure
+PR PrintThis x
+    Print x, "\n"
+
+# function
+FN Add(a, b)
+    RETURN a + b
+
+PrintThis "Hi!"
+Print "1 + 2 = ", Add(1, 2), "\n"
+
+#--------------------------------------------------------
+
+s = "Hello"
+s += " World!\n"
+Print s
+
+#--------------------------------------------------------
+
+FN Fibonacci(n)
+    IF n < 0
+        Print "Incorrect input"
+    ELIF n == 0
+        RETURN 0
+    ELIF n == 1 OR n == 2
+        RETURN 1
+    ELSE
+        RETURN Fibonacci(n-1) + Fibonacci(n-2)
+
+StreamWriteString STDOUT, "Enter a number: "
+input = StreamReadString(STDIN, 6)
+n = Int(input)
+Print "Fibonacci(", Str(n), ") = ", Fibonacci(n), "\n"
+
+#--------------------------------------------------------
+
+a = ['\x31', '2', '\x33'] # byte array
+
+FOR i = 0 TO Len(a) - 1
+    Print "a[", i, "]  = ", a[i], "\n"
+
+#--------------------------------------------------------
+
+i = 0; b = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31] # integer array
+DO
+    i += 1
+
+    IF i % 2 == 0
+        CONTINUE
+    IF i > 7
+        BREAK
+
+    Print b[i], " "
+
+WHILE i < Len(b)
+
+#--------------------------------------------------------
+
+a = 1; b = 2 # try: b = 2.
+
+FN Modify(x, &y) # pass by reference
+    Print "2: x, y ", x, ", ", y, "\n"
+    IF Type(y) != INTEGER
+        Print "Expected y to be an integer but it is a ", Type(y), "!\n"
+        RETURN
+    x = 3; y = 4
+    Print "3: x, y ", x, ", ", y, "\n"
+
+Print "1: a, b ", a, ", ", b, "\n"
+Modify(a, b)
+Print "4: a, b ", a, ", ", b, "\n"
+
+#--------------------------------------------------------
+
+Print "Random float between 0 and 3: ", Random(3.), "\n"
+
+#--------------------------------------------------------
+
+output_file_stream = FileOpen("TestOut.txt", TRUE)
+StreamWriteString output_file_stream, "Write a line\n"
+StreamWriteString output_file_stream, "and another line"
+StreamWriteByte output_file_stream, '.'
+
+FileClose output_file_stream
+
+#--------------------------------------------------------
+
+input_file_stream = FileOpen("Test.txt", FALSE)
+Print Type(input_file_stream), "\n"
+s = StreamReadString(input_file_stream, 6)
+Print "|",s
+StreamPositionMove input_file_stream, 2
+Print "| ",s
+s = StreamReadString(input_file_stream, 3)
+Print "|", s, "|\n"
+
+FileClose input_file_stream
+
+#--------------------------------------------------------
+
+FileCopy "Test.txt", "Test Copy.txt"
+IF NOT FileExists("Test Copy.txt")
+    Print "Something went wrong!"
+FileRename "Test Copy.txt", "Test Renamed.txt"
+FileDelete "Test Renamed.txt"
+
+#--------------------------------------------------------
+
+# Literals can be written with apostrophes as thousand separators for readability
+i = 1'000
+Print i
