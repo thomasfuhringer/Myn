@@ -74,6 +74,7 @@ n = int(input)
 print "Fibonacci(", str(n), ") = ", fibonacci(n), "\n" # print is short for: stream_write_string STDOUT,
 ```
   
+<br/>
 Instructions and built-in funcions can be written in lowercase or - as I prefer for readability - uppercase with function names in CamelCase:
 ```
 FN Fibonacci(n)
@@ -92,6 +93,7 @@ n = Int(input)
 Print "Fibonacci(", Str(n), ") = ", Fibonacci(n), "\n"
 ```
   
+<br/>
 Arrays
 
 ```
@@ -116,6 +118,7 @@ FOR i = 0 TO Len(a) - 1
 
 ```
   
+<br/>
 Pass parameters by reference (to avoid copying)
 
 ```
@@ -134,6 +137,7 @@ Modify(a, b)
 Print "4: a, b ", a, ", ", b, "\n"
 ```
   
+<br/>
 Procedures vs functions
 
 ```
@@ -150,6 +154,7 @@ Print "1 + 2 = ", Add(1, 2), "\n"
 ```
   
   
+<br/>
 This is how you would embed the interpreter:
 
 ```
