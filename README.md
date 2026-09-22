@@ -1,32 +1,33 @@
 # Myn
 
-Simple, light-weight Python style scripting language
+Simple, light-weight Python style scripting language  
 Based on the MIN programming language by Carsten Herting (slu4) at https://github.com/slu4coder/Minimal-UART-CPU-System
+  
 
-
-o Nothing to install - just one small executable file
-o Nothing to learn - common instructions in Python like syntax
-o Easy to embed - a few hundred lines of pure C code, dependent only on the standard library
-o All the essentials for scripting purposes
-
+* Nothing to install - just one small executable file
+* Nothing to learn - common instructions in Python like syntax
+* Easy to embed - a few hundred lines of pure C code, dependent only on the standard library
+* All the essentials for scripting purposes
+  
+  
 Example code:
 
 ```
 print "Hello World.myn"
 ```
-
+  
 
 USAGE: 
 ```
 myn "Hello World.myn"
 ```
-
+  
 or compile it into object code:
 
 ```
 mynce "Hello World.myn"
 ```
-
+  
 and run
 ```
 myn "Hello World.mync"
@@ -34,20 +35,20 @@ myn "Hello World.mync"
 
 ## Features
 
-o Python-style indentation
+* Python-style indentation
 
-o if-elif-else, do-while-continue-break, print, fn-pr-return
+* if-elif-else, do-while-continue-break, print, fn-pr-return
 
-o str(), int(), len(), random(), type()
+* `str()`, `int()`, `len()`, `random()`, `type()`
 
-o string, integer, float, byte, bool and stream data types
+* string, integer, float, byte, bool and stream data types
 
-o local and global variables and 1-dimensional arrays
+* local and global variables and 1-dimensional arrays
 
-o functions with parameters and C-style referencing
+* functions with parameters and C-style referencing
 
-o 'A' replacing ord("A")
-
+* `'A'` replacing `ord("A")`
+  
 
 ## Examples
 
@@ -68,7 +69,7 @@ input = stream_read_string(STDIN, 6)
 n = int(input)
 print "Fibonacci(", str(n), ") = ", fibonacci(n), "\n" # print is short for: stream_write_string STDOUT,
 ```
-
+  
 Instructions and built-in funcions can be written in lower case or - as I prefer for readability - uppercase with function names in CamelCase:
 ```
 FN Fibonacci(n)
@@ -86,7 +87,7 @@ input = StreamReadString(STDIN, 6)
 n = Int(input)
 Print "Fibonacci(", Str(n), ") = ", Fibonacci(n), "\n"
 ```
-
+  
 Arrays
 
 ```
@@ -110,7 +111,7 @@ FOR i = 0 TO Len(a) - 1
     Print "a[", i, "]  = ", a[i], "\n"
 
 ```
-
+  
 Pass parameters by reference (to avoid copying)
 
 ```
@@ -128,7 +129,7 @@ Print "1: a, b ", a, ", ", b, "\n"
 Modify(a, b)
 Print "4: a, b ", a, ", ", b, "\n"
 ```
-
+  
 Procedures vs functions
 
 ```
@@ -143,8 +144,8 @@ FN Add(a, b)
 PrintThis "Hi!"
 Print "1 + 2 = ", Add(1, 2), "\n"
 ```
-
-
+  
+  
 This is how you would embed the interpreter:
 
 ```

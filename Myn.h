@@ -1,5 +1,6 @@
 // Myn scripting language, Thomas Führinger, 2025
 // Version 0.9
+// https://github.com/thomasfuhringer/Myn.git
 
 #pragma once
 #define DEBUG
