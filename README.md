@@ -33,6 +33,7 @@ mynce "Hello World.myn"
   
 <br/>
 and run
+
 ```
 myn "Hello World.mync"
 ```
@@ -76,6 +77,7 @@ print "Fibonacci(", str(n), ") = ", fibonacci(n), "\n" # print is short for: str
   
 <br/>
 Instructions and built-in funcions can be written in lowercase or - as I prefer for readability - uppercase with function names in CamelCase:
+
 ```
 FN Fibonacci(n)
     IF n < 0
