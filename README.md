@@ -1,7 +1,8 @@
 # Myn
 
 Simple, light-weight Python style scripting language  
-Based on the MIN programming language by Carsten Herting (slu4) at https://github.com/slu4coder/Minimal-UART-CPU-System
+Based on the MIN programming language by Carsten Herting (slu4) at  
+https://github.com/slu4coder/Minimal-UART-CPU-System
   
 
 * Nothing to install - just one small executable file
@@ -9,14 +10,14 @@ Based on the MIN programming language by Carsten Herting (slu4) at https://githu
 * Easy to embed - a few hundred lines of pure C code, dependent only on the standard library
 * All the essentials for scripting purposes
   
-  
+  <br/>
 Example code:
 
 ```
 print "Hello World.myn"
 ```
   
-
+<br/>
 USAGE: 
 ```
 myn "Hello World.myn"
@@ -70,7 +71,7 @@ n = int(input)
 print "Fibonacci(", str(n), ") = ", fibonacci(n), "\n" # print is short for: stream_write_string STDOUT,
 ```
   
-Instructions and built-in funcions can be written in lower case or - as I prefer for readability - uppercase with function names in CamelCase:
+Instructions and built-in funcions can be written in lowercase or - as I prefer for readability - uppercase with function names in CamelCase:
 ```
 FN Fibonacci(n)
     IF n < 0
